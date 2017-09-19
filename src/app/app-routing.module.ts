@@ -14,6 +14,8 @@ import { CompanyListComponent } from './company-list/company-list.component';
 import { CompanyComponent } from './company/company.component';
 import { WorkstationListComponent } from './workstation-list/workstation-list.component';
 import { WorkstationComponent } from './workstation/workstation.component';
+import { OutletListComponent } from './outlet-list/outlet-list.component';
+import { OutletComponent } from './outlet/outlet.component';
 const routes: Routes = [
   {
     path: '',
@@ -45,6 +47,10 @@ const routes: Routes = [
       path: 'workstation-list', component: WorkstationListComponent
     },{
       path: 'workstation', component: WorkstationComponent
+    },{
+      path: 'outlet-list', component: OutletListComponent
+    },{
+      path: 'outlet', component: OutletComponent
     }]
   }
 ];

@@ -25,6 +25,8 @@ import { CompanyListComponent } from './company-list/company-list.component';
 import { CompanyComponent } from './company/company.component';
 import { WorkstationListComponent } from './workstation-list/workstation-list.component';
 import { WorkstationComponent } from './workstation/workstation.component';
+import { OutletListComponent } from './outlet-list/outlet-list.component';
+import { OutletComponent } from './outlet/outlet.component';
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -45,7 +47,9 @@ export function createTranslateLoader(http: HttpClient) {
     CompanyListComponent,
     CompanyComponent,
     WorkstationListComponent,
-    WorkstationComponent
+    WorkstationComponent,
+    OutletListComponent,
+    OutletComponent
   ],
   imports: [
     MaterializeModule,

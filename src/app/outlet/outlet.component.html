@@ -1,0 +1,178 @@
+<div class="">
+  <form class="col s12 l9 xl10 offset-l3 offset-xl2">
+    <p>Ouutlet / Add</p>
+    <div class="row">
+      <a class="btn  light-blue darken-4"><i class="material-icons">save</i></a>
+      <a class="btn red darken-4"><i class="material-icons">delete</i></a>
+      <a class="btn grey darken-1"><i routerLink="/Pmain/outlet-list" class="material-icons">cancel</i></a>
+    </div>
+    <div class="row">
+      <div class="input-field col s6 l6 xl6">
+        <label for="outlet_code">Outlet Code</label>
+        <input id="outlet_code" type="text" class="validate">
+      </div>
+      <div class="input-field col s6 l6 xl6">
+        <label for="outlet_name">Outlet Name</label>
+        <input id="outlet_name" type="text" class="validate">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12">
+        <ul class="tabs tabs-fixed-width">
+          <li class="tab col s3"><a class="active" href="#test1">General</a></li>
+          <li class="tab col s3"><a href="#test2">General2</a></li>
+          <li class="tab col s3"><a href="#test3">Detail</a></li>
+          <li class="tab col s3"><a href="#test4">Printer</a></li>
+          <li class="tab col s3"><a href="#test5">Images</a></li>
+          <li class="tab col s3"><a href="#test6">Location</a></li>
+        </ul>
+      </div>
+
+      <!-- General  -->
+      <div id="test1" class="col s12">
+        <div class="row">
+          <div class="input-field col s5 l5 xl5">
+            <select materialize="material_select" disabled="disabled"> 
+                  <option value="" disabled selected>Choose Floor Plan</option>
+                </select>
+            <label>Floor Plan</label>
+          </div>
+          <div class="input-field col s6 l6 xl6">
+            <label for="outlet_name1">Outlet Name1</label>
+            <input id="outlet_name1" type="text" class="validate">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s5 l5 xl5">
+            <select materialize="material_select"> 
+                  <option value="" disabled selected>Choose Outlet Type</option>
+                   <option value="1">Resterant</option>
+                  <option value="2">Fast Food</option>
+                  <option value="3">Detail Shop</option>
+                  <option value="4">Delivery</option>
+                </select>
+            <label>Outlet Type</label>
+          </div>
+          <div class="input-field col s6 l6 xl6">
+            <label for="outlet_name2">Outlet Name2</label>
+            <input id="outlet_name2" type="text" class="validate">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s5 l5 xl5">
+            <select materialize="material_select"> 
+                  <option value="" disabled selected>Choose Company</option>
+                  <option value="1">Bostun co,. LTD,</option>
+                  
+                </select>
+            <label>Company</label>
+          </div>
+          <div class="input-field col s6 l6 xl6">
+            <label for="outlet_name3">Outlet Name3</label>
+            <input id="outlet_name3" type="text" class="validate">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col s3 l3 xl3 margTop">
+            <input type="checkbox" class="filled-in" id="chklongbill" />
+            <label for="chklongbill">Use LongBill</label>
+          </div>
+          <div class="col s2 l2 xl2  margTop">
+            <input type="checkbox" class="filled-in" id="chkJournal" />
+            <label for="chkJournal">Use Journal</label>
+          </div>
+          <div class="input-field col s6 l6 xl6">
+            <label for="outlet_name4">Outlet Name4</label>
+            <input id="outlet_name4" type="text" class="validate">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col s3 l3 xl3 margTop">
+            <input type="checkbox" class="filled-in" id="chkinclusive" />
+            <label for="chkinclusive">Tax Inclusive</label>
+          </div>
+          <div class="col s2 l2 xl2  margTop">
+            <input type="checkbox" class="filled-in" id="chkinterface" />
+            <label for="chkinterface">Use Interface</label>
+          </div>
+          <div class="input-field col s6 l6 xl6">
+            <label for="outlet_name5">Outlet Name5</label>
+            <input id="outlet_name5" type="text" class="validate">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s5 l5 xl5">
+            <select materialize="material_select"> 
+                  <option value="" disabled selected>Choose Default SaleType</option>
+                  <option value="1">Normal</option>
+                  <option value="1">Personal</option>
+                  
+                </select>
+            <label>Default SaleType</label>
+          </div>
+          <div class="input-field col s6 l6 xl6">
+            <input type="text" class="datepicker" name="date" materialize="pickadate" [materializeParams]="[{closeOnSelect: true,format:'dd/mm/yyyy'}]">
+            <label for="txtDate">Date</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s5 l5 xl5">
+            <select materialize="material_select"> 
+                  <option value="" disabled selected>Choose Default Payment</option>
+                  <option value="1">Cash</option>
+                  <option value="1">Hotel Guest</option>
+                  <option value="1">Visa Card</option>
+                </select>
+            <label>Default Payment</label>
+          </div>
+        </div>
+
+        <!-- <div class="row">
+          <p>All Day Layout</p>
+          <p>
+            <input class="with-gap" name="group1" type="radio" id="test2" />
+            <label for="test2">One Layout All DAy</label>
+            <input class="with-gap" name="group1" type="radio" id="test3" />
+            <label for="test3">Change Layout By Shift</label>
+          </p>
+        </div>  -->
+
+
+        <div class="row">
+          <div class="input-field col s6 l6 xl6">
+            <label for="outlet_desc">Outlet Description</label>
+            <input id="outlet_desc" type="text" class="validate">
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6 l6 xl6">
+            <label for="vat_desc">Vat Description</label>
+            <input id="vat_desc" type="text" class="validate">
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6 l6 xl6">
+            <label for="rd">#RD</label>
+            <input id="rd" type="text" class="validate">
+          </div>
+        </div>
+
+      </div>
+
+      <!-- General2 -->
+      <div id="test2" class="col s12">
+
+      </div>
+      <div id="test3" class="col s12">Detail</div>
+      <div id="test4" class="col s12">Printer</div>
+      <div id="test5" class="col s12">Images</div>
+      <div id="test6" class="col s12">Location</div>
+    </div>
+  </form>
+</div>
