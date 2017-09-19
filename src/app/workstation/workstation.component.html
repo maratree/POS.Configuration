@@ -1,3 +1,187 @@
-<p>
-  workstation works!
-</p>
+<div class="">
+  <form class="col s12 l9 xl10 offset-l3 offset-xl2">
+    <p>WorkStation / Add</p>
+    <div class="row">
+      <a class="btn  light-blue darken-4"><i class="material-icons">save</i></a>
+      <a class="btn red darken-4"><i class="material-icons">delete</i></a>
+      <a class="btn grey darken-1"><i routerLink="/Pmain/workstation-list/" class="material-icons">cancel</i></a>
+    </div>
+
+    <div class="row">
+      <div class="col s12">
+        <ul class="tabs tabs-fixed-width">
+          <li class="tab col s3"><a class="active" href="#test1">General</a></li>
+          <li class="tab col s3"><a href="#test2">Printer Bill</a></li>
+
+        </ul>
+      </div>
+      <!-- Start Tab General  -->
+      <div id="test1" class="col s12">
+        <div class="row">
+          <div class="input-field col s4 l4 xl4">
+            <label for="wsCode">WorkStation Code</label>
+            <input id="wsCode" type="text" class="validate">
+          </div>
+
+          <div class="col s2 l2 xl2 martop">
+            <input type="checkbox" class="filled-in" id="chkactivate" />
+            <label for="chkactivate">Active</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6 l6 xl6">
+            <label for="wsName">WorkStation Name</label>
+            <input id="wsName" type="text" class="validate">
+          </div>
+          <div class="input-field col s6 l6 xl6">
+            <label for="wsDesc">WorkStation Description</label>
+            <input id="wswsDescCode" type="text" class="validate">
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6 l6 xl6">
+            <select materialize="material_select"> 
+          <option value="" disabled selected>Choose WorkStation Type</option>
+          <option id="1">Desktop Cashier</option>
+          <option id="2">Desktop Take Order</option>
+          <option id="3">Terminal Box</option>
+         </select>
+            <label>WorkStation Type</label>
+          </div>
+          <div class="input-field col s6 l6 xl6">
+            <select materialize="material_select"> 
+          <option value="" disabled selected>Choose Company</option>
+          <option id="1">BOSTON PARK Co., LTD. </option>
+         </select>
+            <label>Company Name</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6 l6 xl6">
+            <label for="uncname">UNC Name</label>
+            <input id="uncname" type="text" class="validate">
+          </div>
+          <div class="input-field col s6 l6 xl6">
+            <label for="maxAdd">Max Address</label>
+            <input id="maxAdd" type="text" class="validate">
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6 l6 xl6">
+            <select materialize="material_select"> 
+          <option value="" disabled selected>Choose Default Outlet</option>
+          <option id="1">Grand Cafe</option>
+          <option id="2">Room Service</option>
+          <option id="3">Pool Bar</option>
+         </select>
+            <label>Default Outlet</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col s6 l6 xl6 p">
+            <p>Outlet</p>
+            <p>
+              <input type="checkbox" class="filled-in" id="chkGCF" [checked]="chkAll" />
+              <label for="chkGCF">Grand Cafe</label>
+            </p>
+            <p>
+              <input type="checkbox" class="filled-in" id="chkRSV" [checked]="chkAll" />
+              <label for="chkRSV">Room Service</label>
+            </p>
+            <p>
+              <input type="checkbox" class="filled-in" id="chkPB" [checked]="chkAll" />
+              <label for="chkPB">Pool Bar</label>
+            </p>
+            <p class="center">
+              <a class="btn" (click)="chkOutletAll();"><i class="material-icons">check_box</i></a>
+              <a class="btn" (click)="chkOutletUnAll();"><i class="material-icons">check_box_outline_blank</i></a>
+            </p>
+            <br>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s6 l6 xl6">
+            <label for="rd">#RD</label>
+            <input id="rd" type="text" class="validate">
+          </div>
+
+          <div class="col s6 l6 xl6 martop">
+            <input type="checkbox" class="filled-in" id="chkHCD" />
+            <label for="chkHCD">Have Cash Drawer</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s6 l6 xl6">
+            <label for="cpuid">CPU ID</label>
+            <input id="cpuid" type="text" class="validate">
+          </div>
+          <div class="input-field col s6 l6 xl6">
+            <a class="btn">clear</a>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s6 l6 xl6">
+            <textarea id="textarea1" class="materialize-textarea"></textarea>
+            <label for="textarea1">Memo</label>
+          </div>
+
+        </div>
+
+      </div>
+      <!-- Start Tab Printer Bill  -->
+      <div id="test2" class="col s12">
+        <div class="row">
+          <div class="col s4 l4 xl4 p">
+            <span class="left">Printer Event</span>
+            <br>
+            <div class="collection">
+              <a class="collection-item btn">Guest Check</a>
+              <a class="collection-item btn">Payment</a>
+              <a class="collection-item btn">Journal</a>
+            </div>
+          </div>
+          <div class="col s8 l8 xl8 p">
+            <table>
+              <thead>
+                <tr>
+                  <th>Printer Event</th>
+                  <th>Printer Name</th>
+                  <th>Qty</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Guest Check</td>
+                  <td>
+                    <div class="input-field col s12">
+                      <select>
+                        <option value="1">Cashier</option>
+                        <option value="2">Bar</option>
+                        <option value="3">Kitchen</option>
+                      </select>
+                    </div>
+                  </td>
+                  <td><label for="txt"></label>
+                    <input id="txt" type="text" class="validate"></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="col s6 l6 xl6 offset-s4 offset-l4 offset-xl4">
+              <a class="waves-effect waves-light btn green darken-4"><i class="material-icons">add</i></a>
+              <a class="waves-effect waves-light btn deep-orange darken-4"><i class="material-icons">delete</i></a>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+  </form>
+</div>

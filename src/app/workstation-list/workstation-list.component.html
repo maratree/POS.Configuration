@@ -1,3 +1,60 @@
-<p>
-  workstation-list works!
-</p>
+<div class="">
+  <form class="col s12 l9 xl10 offset-l3 offset-xl2">
+    <p>WorkStation / Search</p>
+    <div class="row">
+      <a class="waves-effect waves-light btn green darken-4" routerLink="/Pmain/workstation"><i class="material-icons center">add</i></a>
+      <a class="waves-effect waves-light btn yellow accent-4"><i class="material-icons center">edit</i></a>
+      <a class="waves-effect waves-light btn deep-orange darken-4"><i class="material-icons center">delete</i></a>
+    </div>
+    <div class="row">
+      <div class="input-field col s7 m9 l10 xl10">
+        <label for="user_search">Search</label>
+        <input id="user_search" type="text" class="validate">
+      </div>
+      <div class="input-field col s2 m2 l2 xl2">
+        <a class="waves-effect waves-light btn" align="center">search</a>
+      </div>
+    </div>
+
+    <div class="row">
+      <table class="highlight">
+        <thead>
+          <tr>
+            <th>WorkStation Code</th>
+            <th>WorkStation Name</th>
+            <th>Outlet Name</th>
+            <th>Active</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>01</td>
+            <td>Grand Cafe Cashier</td>
+            <td>Grand Cafe</td>
+            <td><i class="material-icons">check_box</i></td>
+          </tr>
+          <tr>
+            <td>02</td>
+            <td>Room Service</td>
+            <td>Room Service</td>
+            <td><i class="material-icons">check_box</i></td>
+          </tr>
+          <tr>
+            <td>03</td>
+            <td>Pool Bar</td>
+            <td>Pool Bar</td>
+            <td><i class="material-icons">check_box_outline_blank</i></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <ul class="pagination tcenter">
+      <li class="waves-effect" *ngFor="let p of paging;let i = index;" [ngClass]="{'active':i==numPage}" (click)="gotoPage(i);"><a>{{p}}</a></li>
+    </ul>
+
+    <!-- <div class="fixed-action-btn">
+      <a class="btn-floating btn right green darken-4" (click)="onAddbtnClick()"><i class="material-icons">add</i></a>
+    </div> -->
+  </form>
+</div>
