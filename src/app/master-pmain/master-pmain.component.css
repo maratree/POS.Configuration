@@ -1,0 +1,66 @@
+.bg-default {
+    background-color: #2E3C45; 
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+    border-color: transparent !important;
+} 
+.margin-t{
+    margin-top: 20px;
+}
+.margin-setLogo{
+    margin-left: 3%;
+}
+.main_container .top_nav {
+    padding: 0 !important;
+    display: block;
+    padding: 10px 20px 0;
+    margin-left: 230px;
+   
+}
+.side-nav.fixed {
+    left: 0;
+    position: fixed;
+}
+ul.side-nav.leftside-navigation {
+    top: 64px;
+    overflow: hidden;
+}
+.side-nav {
+    position: fixed;
+    width: 240px;
+    left: -105%;
+    top: 0;
+    margin: 0;
+    height: 100%;
+    height: calc(100% + 60px);
+    height: -moz-calc(100%);
+    padding-bottom: 60px;
+    background-color: #fff;
+    z-index: 999;
+    overflow-y: auto;
+    will-change: left;
+}
+.user-roal {
+    color: #fff;
+    margin-top: -34px;
+    font-size: 13px;
+    text-shadow: 1px 1px 1px #444;
+}
+.scrollbar
+{
+	margin-left: 30px;
+	float: left;
+	height: 300px;
+	width: 65px;
+	background: #F5F5F5;
+	overflow-y: scroll;
+	margin-bottom: 25px;
+}
+.force-overflow
+{
+	min-height: 450px;
+}
+.padContent{
+    padding-left: 12.5%;
+}

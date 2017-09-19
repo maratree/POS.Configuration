@@ -1,0 +1,236 @@
+<div class="bg-image">
+  <div>
+
+    <nav>
+      <div class="nav-wrapper blue-grey darken-2">
+        <a class="margin-LR">POS.Manager</a>
+        <a data-activates="mobile-demo" class="button-collapse show-on-large"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><i class="material-icons prefix">account_circle</i></li>
+          <li><label class="margin-setUser" for="prod_name">Maratree Supasing</label></li>
+          <li><a (click)="changLang();"><i class="material-icons left">language</i>{{currentLang}}</a></li>
+          <!-- <li><a (click)="changLangEN();"><img src="assets/images/flag-icons/usa.png"></a></li>
+          <li><a (click)="changLangTH();"><img src="assets/images/flag-icons/th.png"></a></li> -->
+          <li><a (click)="toLogin();"><i class="material-icons">exit_to_app</i></a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <!--Master  -->
+          <li class="no-padding">
+            <ul class="collapsible collapsible-accordion">
+              <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">domain</i>Master</a>
+                <div class="collapsible-body">
+                  <li class="no-padding">
+                    <ul class="collapsible collapsible-accordion">
+                      <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">folder</i>Master Data</a>
+                        <div class="collapsible-body">
+                          <ul>
+                            <li><a (click)="to_companyList();"> - Company</a></li>
+                            <li><a> - Workstation</a></li>
+                            <li><a> - Outlet</a></li>
+                            <li><a> - Zone</a></li>
+                            <li><a> - Shift Group</a></li>
+                            <li><a> - Shift</a></li>
+                            <li class="no-padding">
+                              <ul class="collapsible collapsible-accordion">
+                                <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">folder</i>Decor</a>
+                                  <div class="collapsible-body">
+                                    <ul>
+                                      <li><a> - Decor Type</a></li>
+                                      <li><a> - Decor Status Type</a></li>
+                                      <li><a> - Decor</a></li>
+                                    </ul>
+                                  </div>
+                                </li>
+                              </ul>
+                          </ul>
+                        </div>
+                        </li>
+                    </ul>
+                    </li>
+                    <!--  -->
+                    <li class="no-padding">
+                      <ul class="collapsible collapsible-accordion">
+                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">folder</i>Condiment</a>
+                          <div class="collapsible-body">
+                            <ul>
+                              <li><a> - Condiment Group</a></li>
+                              <li><a> - Condiment</a></li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <!--  -->
+                    <li class="no-padding">
+                      <ul class="collapsible collapsible-accordion">
+                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">folder</i>NonItem</a>
+                          <div class="collapsible-body">
+                            <ul>
+                              <li><a> - Discount</a></li>
+                              <li><a> - Service</a></li>
+                              <li><a> - Vat</a></li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <!--  -->
+                    <li class="no-padding">
+                      <ul class="collapsible collapsible-accordion">
+                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">folder</i>Product</a>
+                          <div class="collapsible-body">
+                            <ul>
+                              <li><a (click)="to_productList();"> - Product</a></li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <!--  -->
+                    <li class="no-padding">
+                      <ul class="collapsible collapsible-accordion">
+                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">folder</i>Menu</a>
+                          <div class="collapsible-body">
+                            <ul>
+                              <li><a> - Menu</a></li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <!--  -->
+                    <li class="no-padding">
+                      <ul class="collapsible collapsible-accordion">
+                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">folder</i>Payment</a>
+                          <div class="collapsible-body">
+                            <ul>
+                              <li><a> - Payment</a></li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <!--  -->
+                    <li class="no-padding">
+                      <ul class="collapsible collapsible-accordion">
+                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">folder</i>Printer</a>
+                          <div class="collapsible-body">
+                            <ul>
+                              <li><a> - Printer</a></li>
+                              <li><a> - Print Format</a></li>
+                              <li><a> - Print Config</a></li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <!--  -->
+                    <li class="no-padding">
+                      <ul class="collapsible collapsible-accordion">
+                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">folder</i>Employee</a>
+                          <div class="collapsible-body">
+                            <ul>
+                              <li><a> - officer</a></li>
+                              <li><a> - Entertain</a></li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <!--  -->
+                    <li class="no-padding">
+                      <ul class="collapsible collapsible-accordion">
+                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">folder</i>Promotion</a>
+                          <div class="collapsible-body">
+                            <ul>
+                              <li><a> - Happy Hour</a></li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <!--  -->
+                </div>
+                </li>
+            </ul>
+            </li>
+            <!--Setup  -->
+            <li class="no-padding">
+              <ul class="collapsible collapsible-accordion">
+                <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">perm_data_setting</i>Setup</a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li><a>- Product</a></li>
+                      <li><a>- Sale Type</a></li>
+                      <li><a>- Policy</a></li>
+                      <li><a>- Message Templete</a></li>
+                      <li><a>- Set Control</a></li>
+                      <li><a>- Personal</a></li>
+                      <li><a>- Report Config</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <!--Security  -->
+            <li class="no-padding">
+              <ul class="collapsible collapsible-accordion">
+                <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">security</i>Security</a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li class="no-padding">
+                        <ul class="collapsible collapsible-accordion">
+                          <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">supervisor_account</i>User</a>
+                            <div class="collapsible-body">
+                              <ul>
+                                <li><a (click)="to_userList();">  - User List</a></li>
+                                <li><a (click)="to_usergroupList()">  - User Group</a></li>
+                              </ul>
+                            </div>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <!--Interface F&B Costing  -->
+            <li class="no-padding">
+              <ul class="collapsible collapsible-accordion">
+                <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">transform</i>Interface FB Costing</a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li><a>- Include Item</a></li>
+                      <li><a>- Generate Textfile</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <!--Report  -->
+            <li class="no-padding">
+              <ul class="collapsible collapsible-accordion">
+                <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">content_paste</i>Report</a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li><a>- Report</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="divider"></li>
+            <li><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">perm_data_setting</i>Database Tool</a></li>
+            <li><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">swap_horiz</i>Interface Tool</a></li>
+            <li class="divider"></li>
+            <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">lock</i>Change Password</a>
+            <!-- <li><a (click)="changLangEN();"><img src="assets/images/flag-icons/usa.png"></a></li>
+            <li><a (click)="changLangTH();"><img src="assets/images/flag-icons/th.png"></a></li> -->
+            <li class="bold"><a (click)="toLogin();" class="collapsible-header waves-effect waves-cyan"><i class="material-icons">exit_to_app</i>Sign out</a>
+
+        </ul>
+      </div>
+    </nav>
+
+    <router-outlet></router-outlet>

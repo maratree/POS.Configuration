@@ -1,0 +1,102 @@
+<div class="">
+  <form class="col s12 l9 xl10 offset-l3 offset-xl2">
+    <p>Product / Search</p>
+    <div class="row">
+      <a class="waves-effect waves-light btn green darken-4" (click)="onAddbtnClick()"><i class="material-icons center">add</i></a>
+      <a class="waves-effect waves-light btn yellow accent-4"><i class="material-icons center">edit</i></a>
+      <a class="waves-effect waves-light btn deep-orange darken-4"><i class="material-icons center">delete</i></a>
+    </div>
+    <div class="row">
+      <div class="input-field col s10 l10 xl10">
+        <label for="prod_code">Search</label>
+        <input id="prod_code" type="text" class="validate">
+      </div>
+      <div class="input-field col s2 l2 xl2">
+        <a class="waves-effect waves-light btn" align="center">search</a>
+      </div>
+      <!-- <div class="input-field col s6 l3 xl2">
+        <input id="prod_name" type="text" class="validate">
+        <label for="prod_name">Product Name</label>
+      </div> -->
+    </div>
+    <!-- 
+    <div class="row">
+      <div class="col s6 l3 xl2">
+        <select materialize="material_select"> 
+          <option value="" disabled selected>Choose product type</option>
+          <option *ngFor="let prodTyp of prodtypeData; let i=index;">{{prodTyp}}</option>
+        </select>
+        <label>Product Type</label>
+      </div>
+      <div class="col s6 l3 xl2">
+        <select materialize="material_select"> 
+          <option value="" disabled selected>Choose product group</option>
+          <option *ngFor="let prodTyp of prodtypeData; let i=index;">{{prodTyp}}</option>
+        </select>
+        <label>Product Group</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s6 l3 xl2">
+        <select materialize="material_select"> 
+          <option value="" disabled selected>Choose product subgroup</option>
+          <option *ngFor="let prodTyp of prodtypeData; let i=index;">{{prodTyp}}</option>
+        </select>
+        <label>Product Subgroup</label>
+      </div>
+      <div class="col s6 l3 xl2">
+        <select materialize="material_select"> 
+          <option value="" disabled selected>Choose inactive</option>
+          <option *ngFor="let prodTyp of prodtypeData; let i=index;">{{prodTyp}}</option>
+        </select>
+        <label>Inactive</label>
+      </div>
+      <div class="col s6 l3 xl2">
+        <select materialize="material_select"> 
+          <option value="" disabled selected>Choose interface FB costing</option>
+          <option *ngFor="let prodTyp of prodtypeData; let i=index;">{{prodTyp}}</option>
+        </select>
+        <label>Interface FB Costing</label>
+      </div>
+      <div class="col s6 l3 xl2">
+        <a class="waves-effect waves-light btn">search</a>
+      </div>
+    </div> -->
+
+    <div class="row">
+      <table class="striped">
+        <thead>
+          <tr>
+            <th>Product Code</th>
+            <th>Product Name</th>
+            <th>Type</th>
+            <th>Group</th>
+            <th>Sub Group</th>
+            <th>Active</th>
+            <th>FB Costing</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let prod of productData; let i=index;">
+            <th>{{prod}}</th>
+            <th>{{prod}}</th>
+            <th>{{prod}}</th>
+            <th>{{prod}}</th>
+            <th>{{prod}}</th>
+            <th>{{prod}}</th>
+            <th>{{prod}}</th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+     <ul class="pagination tcenter">
+      <li class="waves-effect" *ngFor="let p of paging;let i = index;" [ngClass]="{'active':i==numPage}" (click)="gotoPage(i);"><a>{{p}}</a></li>
+    </ul> 
+
+    <!-- <div class="fixed-action-btn">
+      <a class="btn-floating btn right green darken-4" (click)="onAddbtnClick()"><i class="material-icons">add</i></a>
+    </div> -->
+  </form>
+</div>

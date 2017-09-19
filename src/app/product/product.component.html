@@ -1,0 +1,234 @@
+<div class="">
+  <form class="col s12 l9 xl10 offset-l3 offset-xl2">
+    <p>Product / Add</p>
+    <div class="row">
+      <a class="btn  light-blue darken-4"><i class="material-icons">save</i></a>
+      <a class="btn red darken-4"><i class="material-icons">delete</i></a>
+      <a class="btn grey darken-1"><i (click)="onCancelbtnClick();" class="material-icons">cancel</i></a>
+    </div>
+    <div class="row">
+      <div class="input-field col s6 l6 xl6">
+        <label for="prod_code">Product Code</label>
+        <input id="prod_code" type="text" class="validate">
+      </div>
+      <div class="input-field col s6 l6 xl6">
+        <label for="bar_code">Bar Code</label>
+        <input id="bar_code" type="text" class="validate">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s12 l12 xl12">
+        <ul class="tabs blue-grey lighten-5">
+          <li class="tab col s4"><a href="#tab1">General</a></li>
+          <li class="tab col s4"><a class="active" href="#tab2">Pictuer and Condiment</a></li>
+          <li class="tab col s4"><a href="#tab3">Product Print</a></li>
+        </ul>
+      </div>
+      <!-- Start Tab General  -->
+      <div id="tab1" class="col s12 l12 xl12">
+        <div class="row">
+          <div class="input-field col s6 l6 xl6">
+            <label for="prod_name">Product Name</label>
+            <input id="prod_name" type="text" class="validate">
+          </div>
+          <div class="input-field col s6 l6 xl6">
+            <label for="prod_name1">Product Name1</label>
+            <input id="prod_name1" type="text" class="validate">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s6 l6 xl6">
+            <label for="prod_desc">Product Description</label>
+            <input id="prod_desc" type="text" class="validate">
+          </div>
+          <div class="input-field col s6 l6 xl6">
+            <label for="prod_name2">Product Name2</label>
+            <input id="prod_name2" type="text" class="validate">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s6 l6 xl6">
+            <select materialize="material_select"> 
+          <option value="" disabled selected>Choose product Type</option>
+          <option *ngFor="let prodTyp of prodtypeData; let i=index;">{{prodTyp}}</option>
+         </select>
+            <label>Product Type</label>
+          </div>
+          <div class="input-field col s6 l6 xl6">
+            <label for="prod_name3">Product Name3</label>
+            <input id="prod_name3" type="text" class="validate">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s6 l6 xl6">
+            <select materialize="material_select"> 
+          <option value="" disabled selected>Choose product group</option>
+          <option *ngFor="let prodTyp of prodtypeData; let i=index;">{{prodTyp}}</option>
+         </select>
+            <label>Product Group</label>
+          </div>
+          <div class="input-field col s6 l6 xl6">
+            <label for="prod_name4">Product Name4</label>
+            <input id="prod_name4" type="text" class="validate">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s6 l6 xl6">
+            <select materialize="material_select"> 
+          <option value="" disabled selected>Choose product subgroup</option>
+          <option *ngFor="let prodTyp of prodtypeData; let i=index;">{{prodTyp}}</option>
+         </select>
+            <label>Product SubGroup</label>
+          </div>
+          <div class="input-field col s6 l6 xl6">
+            <label for="prod_name5">Product Name5</label>
+            <input id="prod_name5" type="text" class="validate">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s6 l6 xl6">
+            <label for="price">Price</label>
+            <input id="price" type="text" class="validate">
+          </div>
+          <div class="input-field col s6 l6 xl6">
+            <label for="cost">Cost</label>
+            <input id="cost" type="text" class="validate">
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="input-field col s6 l6 xl6">
+            <select materialize="material_select"> 
+            <option value="" disabled selected>Choose biil company</option>
+            <option *ngFor="let prodTyp of prodtypeData; let i=index;">{{prodTyp}}</option>
+          </select>
+            <label>Bill company</label>
+          </div>
+          <div class="input-field col s6 l6 xl6">
+            <select materialize="material_select"> 
+            <option value="" disabled selected>Choose owner company</option>
+            <option *ngFor="let prodTyp of prodtypeData; let i=index;">{{prodTyp}}</option>
+          </select>
+            <label>Owner company</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s6 l6 xl6">
+            <select materialize="material_select"> 
+          <option value="" disabled selected>Choose oder type</option>
+          <option *ngFor="let prodTyp of prodtypeData; let i=index;">{{prodTyp}}</option>
+         </select>
+            <label>Oder Type</label>
+          </div>
+          <div class="input-field col s6 l6 xl6">
+            <select materialize="material_select"> 
+          <option value="" disabled selected>Choose default backgroud</option>
+          <option *ngFor="let prodTyp of prodtypeData; let i=index;">{{prodTyp}}</option>
+         </select>
+            <label>Default Backgroud</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col s6 l6 xl6">
+            <input type="checkbox" class="filled-in" id="intf_fb_cost" />
+            <label for="intf_fb_cost">Interface FB Costing</label>
+          </div>
+          <div class="col s6 l6 xl6">
+            <input type="checkbox" class="filled-in" id="req_resource" />
+            <label for="req_resource">Request resource</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s6 l6 xl6">
+            <label for="intf_code">Interface Code</label>
+            <input id="intf_code" type="text" class="validate">
+          </div>
+          <div class="row">
+            <p>Set product print</p>
+            <div class="col s6 l6 xl6">
+              <input type="checkbox" class="filled-in" id="p_kit" />
+              <label for="p_kit">Printer Kitchen</label>
+              <input type="checkbox" class="filled-in" id="p_inv" />
+              <label for="p_inv">Printer invoice</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Tab General  -->
+      <!-- Start Tab Picture and Condiment  -->
+      <div id="tab2" class="col s12 l12 xl12">
+        <br>
+        <div class="row">
+          <div class="card">
+            <div class="card-image">
+              <img src="./assets/images/no-spicy.jpg">
+              <span class="card-title">Card Title</span>
+              <div class="file-field input-field">
+                <div class="btn">
+                  <span>Upload</span>
+                  <input type="file" name="avatar" multiple><i class="material-icons">file_upload</i>
+                </div>
+                <div class="file-path-wrapper">
+                  <input class="file-path validate" type="text" placeholder="Upload File Pictuer">
+                </div>
+              </div>
+              <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">delete</i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Tab Picture and Condiment  -->
+      <!-- Start Tab Product Print  -->
+      <div id="tab3" class="col s12 l12 xl12">
+        <br>
+        <div class="col s6 l6 xl6">
+          <a class="waves-effect waves-light btn green darken-4"><i class="material-icons center">add</i></a>
+          <a class="waves-effect waves-light btn yellow accent-4"><i class="material-icons center">edit</i></a>
+          <a class="waves-effect waves-light btn deep-orange darken-4"><i class="material-icons center">delete</i></a>
+        </div>
+        <table class="highlight">
+          <thead>
+            <tr>
+              <th>Outlet Name</th>
+              <th>Zone Name</th>
+              <th>Shift Name</th>
+              <th>Printer Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Gotto</td>
+              <td>Zone1</td>
+              <td>Dinner</td>
+              <td>Snagit12</td>
+            </tr>
+            <tr>
+              <td>Bakery</td>
+              <td>Zone2</td>
+              <td>Luanch</td>
+              <td>Snagit12</td>
+            </tr>
+            <tr>
+              <td>Coffe Bar</td>
+              <td>Zone3</td>
+              <td>Luanch</td>
+              <td>Snagit12</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+      <!-- End Tab Product Print  -->
+    </div>
+  </form>
+</div>

@@ -1,0 +1,54 @@
+<div class="">
+  <form class="col s12 l9 xl10 offset-l3 offset-xl2">
+    <p>User group / Add</p>
+    <div class="row">
+      <a class="btn  light-blue darken-4"><i class="material-icons">save</i></a>
+      <a class="btn red darken-4"><i class="material-icons">delete</i></a>
+      <a class="btn grey darken-1"><i (click)="onCancelbtnClick();" class="material-icons">cancel</i></a>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s10 l10 xl10">
+        <label for="Gname">Group Name</label>
+        <input id="Gname" type="text" class="validate">
+      </div>
+
+      <div class="col s2 l2 xl2 margintop">
+        <input type="checkbox" class="filled-in" id="chkactive" />
+        <label for="chkactive">Active</label>
+      </div>
+
+      <div class="row">
+        <table class="highlight">
+          <thead>
+            <tr>
+              <th>PPID</th>
+              <th>Permission Name</th>
+              <th>Active</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>10001</td>
+              <td>New Order</td>
+              <td><input type="checkbox" class="filled-in" id="chkactive1" />
+                <label for="chkactive1"></label></td>
+            </tr>
+            <tr>
+              <td>10002</td>
+              <td>Close Check</td>
+              <td><input type="checkbox" class="filled-in" id="chkactive2" />
+                <label for="chkactive2"></label></td>
+            </tr>
+            <tr>
+              <td>10003</td>
+              <td>Re-Open Bill On Order Date</td>
+              <td><input type="checkbox" class="filled-in" id="chkactive3" />
+                <label for="chkactive3"></label></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </form>
+</div>

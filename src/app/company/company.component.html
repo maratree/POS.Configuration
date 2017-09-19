@@ -1,0 +1,332 @@
+<div class="">
+  <form class="col s12 l9 xl10 offset-l3 offset-xl2">
+    <p>Company / Add</p>
+    <div class="row">
+      <a class="btn  light-blue darken-4"><i class="material-icons">save</i></a>
+      <a class="btn red darken-4"><i class="material-icons">delete</i></a>
+      <a class="btn grey darken-1"><i (click)="onCancelbtnClick();" class="material-icons">cancel</i></a>
+    </div>
+    <div class="row">
+      <div class="input-field col s6 l6 xl6">
+        <label for="comp_code">Company Code</label>
+        <input id="comp_code" type="text" class="validate">
+      </div>
+      <div class="col s6 l6 xl6  margTop">
+        <input type="checkbox" class="filled-in" id="chkActive" />
+        <label for="chkActive">Active</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s6 l6 xl6">
+        <label for="comp_th_name">Company Thai Name</label>
+        <input id="comp_th_name" type="text" class="validate">
+      </div>
+      <div class="input-field col s6 l6 xl6">
+        <label for="comp_en_name">Company English Code</label>
+        <input id="comp_en_name" type="text" class="validate">
+      </div>
+    </div>
+
+    <!-- Start Tab  -->
+    <div class="row">
+      <div class="col s12">
+        <ul class="tabs">
+          <li class="tab col s3"><a href="#test1">General</a></li>
+          <li class="tab col s3"><a class="active" href="#test2">Hotel</a></li>
+          <li class="tab col s3"><a href="#test3">Interface</a></li>
+          <li class="tab col s3"><a href="#test4">Generate Tax/AR</a></li>
+        </ul>
+      </div>
+      <!-- Tab General  -->
+      <div id="test1" class="col s12">
+        <div class="row">
+          <div class="input-field col s3 l3 xl3">
+            <label for="officer_number">Officer Number</label>
+            <input id="officer_number" type="text" class="validate">
+          </div>
+          <div class="input-field col s3 l3 xl3">
+            <label for="moo">Moo</label>
+            <input id="moo" type="text" class="validate">
+          </div>
+          <div class="input-field col s3 l3 xl3">
+            <label for="soi">Soi</label>
+            <input id="soi" type="text" class="validate">
+          </div>
+          <div class="input-field col s3 l3 xl3">
+            <label for="road">Road</label>
+            <input id="road" type="text" class="validate">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s4 l4 xl4">
+            <label for="district">District</label>
+            <input id="district" type="text" class="validate">
+          </div>
+          <div class="input-field col s4 l4 xl4">
+            <label for="border">Border</label>
+            <input id="border" type="text" class="validate">
+          </div>
+          <div class="input-field col s4 l4 xl4">
+            <select materialize="material_select"> 
+          <option value="" disabled selected>Choose Province</option>
+          <option value="1">Province 1</option>
+          <option value="2">Province 2</option>
+          <option value="3">Province 3</option>
+         </select>
+            <label>Province</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s4 l4 xl4">
+            <select materialize="material_select"> 
+          <option value="" disabled selected>Choose Country</option>
+          <option value="1">Country 1</option>
+          <option value="2">Country 2</option>
+          <option value="3">Country 3</option>
+         </select>
+            <label>Country</label>
+          </div>
+          <div class="input-field col s4 l4 xl4">
+            <label for="PostalCode">Postal Code</label>
+            <input id="PostalCode" type="text" class="validate">
+          </div>
+          <div class="input-field col s4 l4 xl4">
+            <label for="Telephone">Telephone</label>
+            <input id="Telephone" type="text" class="validate">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s3 l3 xl3">
+            <label for="Fax">Fax Number</label>
+            <input id="Fax" type="text" class="validate">
+          </div>
+          <div class="input-field col s3 l3 xl3">
+            <label for="Tax">Tax ID</label>
+            <input id="Tax" type="text" class="validate">
+          </div>
+          <div class="col s2 l2 xl2  margTop">
+            <input type="checkbox" class="filled-in" id="chkHeadofficer" />
+            <label for="chkHeadofficer">Head Officer</label>
+          </div>
+          <div class="input-field col s4 l4 xl4">
+            <label for="Branch">Branch</label>
+            <input id="Branch" type="text" class="validate">
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12 l12 xl12">
+            <textarea id="textarea1" class="materialize-textarea"></textarea>
+            <label for="textarea1">Address Bill</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12 l12 xl12">
+            <textarea id="textarea2" class="materialize-textarea"></textarea>
+            <label for="textarea2">English Address Bill</label>
+          </div>
+        </div>
+      </div>
+      <!-- Tab Hotel -->
+      <div id="test2" class="col s12">
+        <div class="row">
+          <div class="input-field col s6 l6 xl6">
+            <label for="thHotelname">Thai Hotel Name</label>
+            <input id="thHotelname" type="text" class="validate">
+          </div>
+          <div class="input-field col s6 l6 xl6">
+            <label for="enHotelname">English Hotel Name</label>
+            <input id="enHotelname" type="text" class="validate">
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6 l6 xl6">
+            <label for="thRptHead">Thai Report Header</label>
+            <input id="thRptHead" type="text" class="validate">
+          </div>
+          <div class="input-field col s6 l6 xl6">
+            <label for="enRptHead">English Report Header</label>
+            <input id="enRptHead" type="text" class="validate">
+          </div>
+        </div>
+
+        <div class="row container col col s12 m4 offset-m4">
+          <div class="card">
+            <div class="card-image">
+              <img src="./assets/images/company.png">
+              <span class="card-title">Card Title</span>
+              <div class="file-field input-field">
+                <div class="btn">
+                  <input type="file" name="avatar" multiple><i class="material-icons">file_upload</i>
+                </div>
+                <div class="file-path-wrapper">
+                  <input class="file-path validate" type="text" placeholder="Upload File Pictuer">
+                </div>
+              </div>
+              <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">delete</i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- Tab Interface -->
+      <div id="test3" class="col s12">
+        <div class="row">
+          <div class="input-field col s11 l11 xl11">
+            <label for="toendP">To End Point</label>
+            <input id="toendP" type="text" class="validate">
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s11 l11 xl11">
+            <label for="serverTimeout">Server Timeout</label>
+            <input id="serverTimeout" type="text" class="validate">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col s3 l3 xl3  margTop">
+            <input type="checkbox" class="filled-in" id="chkusehttp" />
+            <label for="chkusehttp">Use Https?</label>
+          </div>
+
+
+          <form action="#">
+            <label for="Type">Type</label>
+            <p>
+              <input class="with-gap" name="group1" type="radio" id="Room" />
+              <label for="Room">Room</label>
+              <input class="with-gap" name="group1" type="radio" id="Folio" />
+              <label for="Folio">Folio</label>
+            </p>
+          </form>
+
+        </div>
+      </div>
+      <!-- Tab Generate Tax/AR -->
+      <div id="test4" class="col s12">
+        <div class="row">
+          <div class="col s6 l6 xl6">
+            <form action="#">
+              <label for="Type">Generate Tax/AR</label>
+              <p>
+                <input class="with-gap" name="group1" type="radio" id="Workstation" />
+                <label for="Workstation">Workstation</label>
+                <input class="with-gap" name="group1" type="radio" id="Outlet" />
+                <label for="Outlet">Outlet</label>
+              </p>
+            </form>
+          </div>
+          <div class="col s6 l6 xl6">
+            <form action="#">
+              <label for="Type">Generate #RD</label>
+              <p>
+                <input class="with-gap" name="group2" type="radio" id="WorkstationPay" />
+                <label for="WorkstationPay">Workstation Payment</label>
+                <input class="with-gap" name="group2" type="radio" id="OutletRD" />
+                <label for="OutletRD">Outlet</label>
+              </p>
+            </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s2 l2 xl2 p">
+            <span>Document Type</span>
+            <div class="collection">
+              <a class="collection-item btn">Tax ABB</a>
+              <a class="collection-item btn">AR</a>
+            </div>
+          </div>
+          <div class="col s4 l4 xl4 p">
+            <span>Set Foemat Code</span>
+            <div class="row">
+              <div class="input-field col s9 l9 xl9">
+                <label for="str"></label>
+                <input id="str" type="text" class="validate">
+              </div>
+              <div class="col s3 l3 xl3  margTop">
+                <input type="checkbox" class="filled-in" id="chkSymbol1" />
+                <label for="chkSymbol1">-</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s9 l9 xl9">
+                <select materialize="material_select"> 
+                  <option value="" disabled selected>Choose</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                </select>
+                <label></label>
+              </div>
+
+              <div class="col s3 l3 xl3  margTop">
+                <input type="checkbox" class="filled-in" id="chkSymbol2" />
+                <label for="chkSymbol2">-</label>
+              </div>
+
+            </div>
+            <div class="row">
+              <div class="input-field col s9 l9 xl9">
+                <label for="str2"></label>
+                <input id="str2" type="text" class="validate">
+              </div>
+            </div>
+            <p class="center">Format xx-xxx-xx</p>
+            <br>
+          </div>
+          <div class="col s6 l6 xl6 p">
+            <span>Set Start At</span>
+            <table>
+              <thead>
+                <tr>
+                  <th>WorkStation Code</th>
+                  <th>WorkStaion Name</th>
+                  <th class="center">Start At</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>01</td>
+                  <td>Grand Cafe Cashier</td>
+                  <td>
+                    <label for="txt"></label>
+                    <input id="txt" type="text" class="validate">
+                  </td>
+                </tr>
+                <tr>
+                  <td>02</td>
+                  <td>Room Service</td>
+                  <td>
+                    <label for="txt"></label>
+                    <input id="txt" type="text" class="validate">
+                  </td>
+                </tr>
+                <tr>
+                  <td>03</td>
+                  <td>Pool Bar</td>
+                  <td>
+                    <label for="txt"></label>
+                    <input id="txt" type="text" class="validate">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- End Tab  -->
+
+  </form>
+</div>

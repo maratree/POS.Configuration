@@ -1,0 +1,43 @@
+<div class="bg-image">
+    <div>
+        <!-- <nav>
+            <div class="nav-wrapper bg-default">
+                <a href="#!" class="brand-logo margin-LR">POS.Manager</a>
+                <ul class="right hide-on-med-and-down">
+                    <li>
+                        <a (click)="changLangEN();"><img src="assets/images/flag-icons/usa.png"></a>
+                    </li>
+                    <li>
+                        <a (click)="changLangTH();"><img src="assets/images/flag-icons/th.png"></a>
+                    </li>
+                </ul>
+            </div>
+        </nav> -->
+
+        <nav>
+            <div class="nav-wrapper blue-grey darken-2">
+                <a class="margin-LR">POS.Manager</a>
+                <a data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a>Database Tool</a></li>
+                    <li><a>Interface Tool</a></li>
+                    <li><a>Login</a></li>
+                    <li><a (click)="changLang();"><i class="material-icons left">language</i>{{currentLang}}</a></li>
+
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">perm_data_setting</i>Database Tool</a></li>
+                    <li><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">swap_horiz</i>Interface Tool</a></li>
+                    <li class="divider"></li>
+                    <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">lock</i>Change Password</a>
+                    <li class="divider"></li>
+                    <li class="bold"><a (click)="toLogin();" class="collapsible-header waves-effect waves-cyan"><i class="material-icons">exit_to_app</i>Sign in</a>
+
+                </ul>
+            </div>
+        </nav>
+        <!--  -->
+
+        <router-outlet></router-outlet>
+    </div>
+</div>
