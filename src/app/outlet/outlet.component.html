@@ -47,7 +47,7 @@
           <div class="input-field col s5 l5 xl5">
             <select materialize="material_select"> 
                   <option value="" disabled selected>Choose Outlet Type</option>
-                   <option value="1">Resterant</option>
+                  <option value="1">Resterant</option>
                   <option value="2">Fast Food</option>
                   <option value="3">Detail Shop</option>
                   <option value="4">Delivery</option>
@@ -141,8 +141,7 @@
             <input class="with-gap" name="group1" type="radio" id="test3" />
             <label for="test3">Change Layout By Shift</label>
           </p>
-        </div>  -->
-
+        </div>   -->
 
         <div class="row">
           <div class="input-field col s6 l6 xl6">
@@ -163,15 +162,110 @@
           </div>
         </div>
 
+        <div class="row">
+          <div class="col s3 l3 xl3 margTop">
+            <input type="checkbox" class="filled-in" id="chkCloseDay" />
+            <label for="chkCloseDay">CloseDay Over SystemDate</label>
+          </div>
+        </div>
       </div>
-
       <!-- General2 -->
       <div id="test2" class="col s12">
+        <div class="row">
+          <p>Language</p>
+          <div class="input-field col s12 l12 xl12 ">
+            <select materialize="material_select"> 
+          <option value="" disabled selected>Choose Product Name</option>
+          <option id="1">Product Name</option>
+          <option id="2">Product Name1</option>
+          <option id="3">Product Name2</option>
+         </select>
+            <label>Display Language</label>
+          </div>
+        </div>
 
+        <div class="row">
+          <div class="input-field col s12 l12 xl12 ">
+            <select materialize="material_select"> 
+          <option value="" disabled selected>Choose Product Name</option>
+          <option id="1">Product Name</option>
+          <option id="2">Product Name1</option>
+          <option id="3">Product Name2</option>
+         </select>
+            <label>Print Language</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12 l12 xl12">
+            <select materialize="material_select"> 
+          <option value="" disabled selected>Choose Product Name</option>
+          <option id="1">Product Name</option>
+          <option id="2">Product Name1</option>
+          <option id="3">Product Name2</option>
+         </select>
+            <label>Kitchen Language</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col s6 l6 xl6 p">
+            <p>Outlet</p>
+            <p>
+              <input type="checkbox" class="filled-in" id="chkOfficer" />
+              <label for="chkOfficer">Print Officer Close Shift Report</label>
+            </p>
+            <p>
+              <input type="checkbox" class="filled-in" id="chkEntertain" />
+              <label for="chkEntertain">Print Entertain Close Shift Report</label>
+            </p>
+            <p>
+              <input type="checkbox" class="filled-in" id="chkCoupon" />
+              <label for="chkCoupon">Print Coupon Report</label>
+            </p>
+          </div>
+          <div class="col s6 l6 xl6 p ">
+            <p>Guest Check Reset</p>
+            <p>
+              <input class="with-gap" name="group1" type="radio" id="EDay" />
+              <label for="EDay">Every Day</label>
+            </p>
+            <p>
+              <input class="with-gap" name="group1" type="radio" id="EMonth" />
+              <label for="EMonth">Every Month</label>
+            </p>
+            <p>
+              <input class="with-gap" name="group1" type="radio" id="resetNum" />
+              <label for="resetNum">Reset On Number</label>
+              <input id="reset_number" type="textbox" class="validate">
+              <!-- <label for="last_name">Last Name</label> -->
+
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col s6 l6 xl6 p">
+            <p>Cover</p>
+            <p>
+              <input type="checkbox" class="filled-in" id="chk1" />
+              <label for="chk1">Need Cover</label>
+            </p>
+            <p>
+              <input type="checkbox" class="filled-in" id="chk2" />
+              <label for="chk2">Cover On Open</label>
+            </p>
+          </div>
+        </div>
+        <!--  -->
       </div>
+      <!-- Detail -->
       <div id="test3" class="col s12">Detail</div>
+      <!-- Printer -->
       <div id="test4" class="col s12">Printer</div>
+      <!-- Images -->
       <div id="test5" class="col s12">Images</div>
+      <!-- Location -->
       <div id="test6" class="col s12">Location</div>
     </div>
   </form>

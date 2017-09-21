@@ -172,6 +172,29 @@
                 </li>
               </ul>
             </li>
+            <!--TEST MENU  -->
+            <li class="no-padding">
+              <ul class="collapsible collapsible-accordion">
+                <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">security</i>TEST MENU</a>
+                  <div class="collapsible-body">
+                    <ul>
+                      <li class="no-padding">
+                        <ul class="collapsible collapsible-accordion">
+                          <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">supervisor_account</i>MENU</a>
+                            <div class="collapsible-body">
+                              <ul>
+                                <li><a *ngFor="let a of menuListData;">{{a.firstName}}</a></li>
+
+                              </ul>
+                            </div>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </li>
             <!--Security  -->
             <li class="no-padding">
               <ul class="collapsible collapsible-accordion">
@@ -225,9 +248,9 @@
             <li><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">swap_horiz</i>Interface Tool</a></li>
             <li class="divider"></li>
             <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">lock</i>Change Password</a>
-            <!-- <li><a (click)="changLangEN();"><img src="assets/images/flag-icons/usa.png"></a></li>
+              <!-- <li><a (click)="changLangEN();"><img src="assets/images/flag-icons/usa.png"></a></li>
             <li><a (click)="changLangTH();"><img src="assets/images/flag-icons/th.png"></a></li> -->
-            <li class="bold"><a (click)="toLogin();" class="collapsible-header waves-effect waves-cyan"><i class="material-icons">exit_to_app</i>Sign out</a>
+              <li class="bold"><a (click)="toLogin();" class="collapsible-header waves-effect waves-cyan"><i class="material-icons">exit_to_app</i>Sign out</a>
 
         </ul>
       </div>

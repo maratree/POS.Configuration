@@ -11,7 +11,9 @@ export class PageMainComponent implements OnInit {
 
   currentLang = "en";
   constructor(private tranService: TranslateService, private router: Router) { }
-
+  menuListData = [{ "firstName": "John", "lastName": "Doe" },
+  { "firstName": "Anna", "lastName": "Smith" },
+  { "firstName": "Peter", "lastName": "Jones" }]
   ngOnInit() {
     $(".button-collapse").sideNav();
   }
