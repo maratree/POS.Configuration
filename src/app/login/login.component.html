@@ -35,33 +35,16 @@
 </div> -->
 <!-- </div>  -->
 
-<!--Test Login page new   -->
-<div class="row marTop">
-  <div class="col s12 l12 xl12">
-    <div class=" blue-grey lighten-5">
-      <div class="card-content white-text">
-        <div class="panel-heading head-register">
-          <h3 class="panel-title center-align">{{'login.sign-in' | translate}}</h3>
-        </div>
-        <div class="panel-body">
-          <form role="form" method="post" novalidate="novalidate">
-            <div class="form-group">
-              <br>
-              <input type="text" name="login" [placeholder]="'login.username'| translate" aria-invalid="false" aria-describedby="login-error">
-              <span id="login-error" class="help-block"></span>
-            </div>
-            <div class="form-group">
-              <input type="Password" name="password" [placeholder]="'login.password'| translate" aria-invalid="false" aria-describedby="Pass-error">
-              <span id="password-error" class="help-block"></span>
-            </div>
-            <div class="row">
-              <div class="col-xs-12 col-sm-12 col-md-12 " align="center">
-                <button type="submit" class="btn btn-default btn-submit" (click)="dosignin()" value="1">{{'login.sign-in' | translate}}</button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
+
+<!-- start form 3  -->
+<div class="login-page">
+  <div class="form">
+    <p>{{'login.welcome' | translate}}</p>
+    <form class="login-form">
+      <input type="text" [placeholder]="'login.username'| translate"/>
+      <input type="password" [placeholder]="'login.password'| translate"/>
+       <button type="submit" class="btn btn-default btn-submit" (click)="dosignin()" value="1">{{'login.sign-in' | translate}}</button>
+      <!-- <p class="message">Not registered? <a href="#">Create an account</a></p> -->
+    </form>
   </div>
 </div>

@@ -10,13 +10,16 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   currentLang = "en";
-  constructor(private tranService: TranslateService,private router: Router) { }
-  
+  constructor(private tranService: TranslateService, private router: Router) { }
+
   ngOnInit() {
+    $('.message a').click(function () {
+      $('form').animate({ height: "toggle", opacity: "toggle" }, "slow");
+    });
     this.tranService.use(this.currentLang);
 
   }
-  dosignin(){
+  dosignin() {
     this.router.navigate(['Pmain']);
   }
 

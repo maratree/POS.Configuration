@@ -11,10 +11,18 @@ export class PageMainComponent implements OnInit {
 
   currentLang = "en";
   constructor(private tranService: TranslateService, private router: Router) { }
-  menuListData = [{ "firstName": "John", "lastName": "Doe" },
-  { "firstName": "Anna", "lastName": "Smith" },
-  { "firstName": "Peter", "lastName": "Jones" }]
+  menuListData = [{ "id": "01", "menuname": "A", "mom": "0" },
+  { "id": "0101", "menuname": "AA", "mom": "01" },
+  { "id": "010101", "menuname": "AAA", "mom": "0101" }]
   ngOnInit() {
+    // menu tree
+    $(document).ready(function () {
+      $('label.tree-toggler').click(function () {
+        $(this).parent().children('ul.tree').toggle(300);
+      });
+    });
+    // end menu tree
+
     $(".button-collapse").sideNav();
   }
   changLang() {
