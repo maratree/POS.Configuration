@@ -240,7 +240,7 @@ hr{
     height: 36px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
-    border-radius: 3px;
+    border-radius: 20px;
     border: none;
     -o-transition: all 0.218s;
     -moz-transition: all 0.218s;
@@ -264,7 +264,6 @@ hr{
     color: rgb(12, 97, 33);
 }
 /* ####################################################### form 3 ##########################  */
-/* @import url(https://fonts.googleapis.com/css?family=Roboto:300); */
 
 .login-page {
   width: 360px;
@@ -305,6 +304,7 @@ hr{
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
   cursor: pointer;
+ 
 }
 .form button:hover,.form button:active,.form button:focus {
   background:  #0288d1;

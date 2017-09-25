@@ -19,25 +19,97 @@
                 <a class="margin-LR">POS.Manager</a>
                 <a data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a>Database Tool</a></li>
-                    <li><a>Interface Tool</a></li>
-                    <li><a>Login</a></li>
+                    <li><a class="waves-effect waves-light modal-trigger" href="#modal1">Database Tool</a></li>
+                    <li><a class="waves-effect waves-light modal-trigger" href="#modal2">Interface Tool</a></li>
+                    <!-- <li><a>Login</a></li> -->
                     <li><a (click)="changLang();"><i class="material-icons left">language</i>{{currentLang}}</a></li>
 
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
-                    <li><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">perm_data_setting</i>Database Tool</a></li>
-                    <li><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">swap_horiz</i>Interface Tool</a></li>
+                    <li><a class="waves-effect waves-light modal-trigger" href="#modal1"><i class="material-icons">perm_data_setting</i>Database Tool</a></li>
+                    <li><a class="waves-effect waves-light modal-trigger" href="#modal2"><i class="material-icons">swap_horiz</i>Interface Tool</a></li>
                     <li class="divider"></li>
                     <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">lock</i>Change Password</a>
-                    <li class="divider"></li>
-                    <li class="bold"><a (click)="toLogin();" class="collapsible-header waves-effect waves-cyan"><i class="material-icons">exit_to_app</i>Sign in</a>
+                        <!-- <li class="divider"></li>
+                        <li class="bold"><a (click)="toLogin();" class="collapsible-header waves-effect waves-cyan"><i class="material-icons">exit_to_app</i>Sign in</a> -->
 
                 </ul>
             </div>
         </nav>
         <!--  -->
 
+        <!-- Modal Structure Database Tool-->
+        <div id="modal1" class="modal modal-fixed-footer">
+            <div class="modal-content">
+                <h4>Database Tool</h4>
+                <div class="row">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12">
+
+                                <input id="server_name" type="text" class="validate">
+                                <label for="server_name">Sever Name</label>
+                            </div>
+                            <div class="input-field col s12">
+                                <input id="database_name" type="text" class="validate">
+                                <label for="database_name">Database Name</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">account_circle</i>
+                                <input id="user_name" type="text" class="validate">
+                                <label for="user_name">User Name</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <i class="material-icons prefix">lock</i>
+                                <input id="password_name" type="password" class="validate">
+                                <label for="password_name">Password</label>
+                            </div>
+                        </div>
+                        <div class="pull-right"><a>Status</a></div>
+                        <div Class="divider"></div>
+                        <div class="input-field col s6">
+                            <a class="waves-effect waves-light btn  green darken-4"><i class="material-icons left">save</i>Save</a>
+                        </div>
+                        <div class="input-field col s6">
+                            <a class="waves-effect waves-light btn yellow accent-4">Check Database</a>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <a class="waves-effect waves-light btn grey lighten-1">Backup Database</a>
+                            </div>
+                            <div class="input-field col s6">
+                                <a class="waves-effect waves-light btn grey lighten-1">Restore Database</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <h4>Interface Tool</h4>
+                <div class="file-field input-field">
+                    <div class="btn">
+                        <span>Path</span>
+                        <input type="file">
+                    </div>
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6 offset-s3">
+                        <a class="waves-effect waves-light btn green darken-4">Save</a>
+                        <a class="waves-effect waves-light btn grey lighten-1">Clear</a>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="modal-footer">
+                <a class="modal-action modal-close waves-effect waves-green btn">Close</a>
+            </div> -->
+        </div>
         <router-outlet></router-outlet>
     </div>
 </div>

@@ -16,6 +16,9 @@ import { WorkstationListComponent } from './workstation-list/workstation-list.co
 import { WorkstationComponent } from './workstation/workstation.component';
 import { OutletListComponent } from './outlet-list/outlet-list.component';
 import { OutletComponent } from './outlet/outlet.component';
+import { ShiftGroupComponent } from './shift-group/shift-group.component';
+import { DiscountListComponent } from './discount-list/discount-list.component';
+import { DiscountComponent } from './discount/discount.component';
 const routes: Routes = [
   {
     path: '',
@@ -29,28 +32,34 @@ const routes: Routes = [
     component: PageMainComponent,
     children: [{
       path: 'product-list', component: ProductListComponent
-    },{
+    }, {
       path: 'product', component: ProductComponent
-    },{
+    }, {
       path: 'user-list', component: UserListComponent
-    },{
+    }, {
       path: 'user', component: UserComponent
-    },{
+    }, {
       path: 'usergroup-list', component: UsergroupListComponent
-    },{
+    }, {
       path: 'usergroup', component: UsergroupComponent
-    },{
+    }, {
       path: 'company-list', component: CompanyListComponent
-    },{
+    }, {
       path: 'company', component: CompanyComponent
-    },{
+    }, {
       path: 'workstation-list', component: WorkstationListComponent
-    },{
+    }, {
       path: 'workstation', component: WorkstationComponent
-    },{
+    }, {
       path: 'outlet-list', component: OutletListComponent
-    },{
+    }, {
       path: 'outlet', component: OutletComponent
+    }, {
+      path: 'shift-group', component: ShiftGroupComponent
+    }, {
+      path: 'discount-list', component: DiscountListComponent
+    }, {
+      path: 'discount', component: DiscountComponent
     }]
   }
 ];

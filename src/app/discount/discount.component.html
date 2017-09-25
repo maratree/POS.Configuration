@@ -1,0 +1,145 @@
+<div class="">
+  <form class="col s12 l9 xl10 offset-l3 offset-xl2">
+    <p>Discount / Add</p>
+    <div class="row">
+      <a class="btn  light-blue darken-4"><i class="material-icons">save</i></a>
+      <a class="btn red darken-4"><i class="material-icons">delete</i></a>
+      <a class="btn grey darken-1"><i  routerLink="/Pmain/discount-list" class="material-icons">cancel</i></a>
+    </div>
+    <div class="row">
+      <div class="input-field col s4 l4 xl4">
+        <label for="ipu_code">Ipu Code</label>
+        <input id="ipu_code" type="text" class="validate">
+      </div>
+      <div class="input-field col s4 l4 xl4">
+        <label for="disc_code">Discount Code</label>
+        <input id="disc_code" type="text" class="validate">
+      </div>
+      <div class="col s4 l4 xl4 margTop">
+        <input type="checkbox" class="filled-in" id="chkActive" checked="checked" />
+        <label for="chkActive">Active</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s6 l6 xl6">
+        <label for="disc_name">Discount Name</label>
+        <input id="disc_name" type="text" class="validate">
+      </div>
+      <div class="input-field col s6 l6 xl6">
+        <label for="disc_desc">Discount Description</label>
+        <input id="disc_desc" type="text" class="validate">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s12">
+        <ul class="tabs tabs-fixed-width  light-blue darken-1">
+          <li class="tab col s3"><a class="active" href="#test1">General</a></li>
+          <li class="tab col s3"><a href="#test2">Subgroup</a></li>
+        </ul>
+      </div>
+      <!-- General  -->
+      <div id="test1" class="col s12">
+        <div class="row">
+          <div class="input-field col s6 l6 xl6">
+            <select materialize="material_select"> 
+                  <!-- <option value="" disabled selected>Choose Product SubGroup</option> -->
+                  <option value="01">Discount</option>
+                </select>
+            <label>Product SubGroup</label>
+          </div>
+          <div class="input-field col s6 l6 xl6">
+            <label for="discount_name1">Discount Name1</label>
+            <input id="discount_name1" type="text" class="validate">
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s3 l3 xl3">
+            <select materialize="material_select"> 
+                  <option value="" disabled selected>Choose Calculate</option>
+                  <option value="1">Amount</option>
+                  <option value="2">Percent</option>
+                  
+                </select>
+            <label>Default SaleType</label>
+          </div>
+          <div class="input-field col s3 l3 xl3">
+            <label for="calculate"></label>
+            <input id="calculate" type="text" class="validate">
+          </div>
+          <div class="input-field col s6 l6 xl6">
+            <label for="discount_name2">Discount Name2</label>
+            <input id="discount_name2" type="text" class="validate">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s6 l6 xl6">
+            <input type="checkbox" class="filled-in" id="chk_taxinclusive" checked="checked" />
+            <label for="chk_taxinclusive">Tax Inclusive</label>
+          </div>
+          <div class="input-field col s6 l6 xl6">
+            <label for="discount_name3">Discount Name3</label>
+            <input id="discount_name3" type="text" class="validate">
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6 l6 xl6">
+            <select materialize="material_select"> 
+                  <!-- <option value="" disabled selected>Choose Order Type</option> -->
+                  <option value="01">Fix</option>
+                  <option value="02">Discription</option>
+                  <option value="03">Value</option>
+                  <option value="04">Customer</option>
+                </select>
+            <label>Order Type</label>
+          </div>
+          <div class="input-field col s6 l6 xl6">
+            <label for="discount_name4">Discount Name4</label>
+            <input id="discount_name4" type="text" class="validate">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s6 l6 xl6">
+            <input type="checkbox" class="filled-in" id="chkFmember" checked="checked" />
+            <label for="chkFmember">For Member</label>
+          </div>
+          <div class="input-field col s6 l6 xl6">
+            <label for="discount_name5">Discount Name5</label>
+            <input id="discount_name5" type="text" class="validate">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s4 l4 xl4">
+            <input type="checkbox" class="filled-in" id="chk_cal_nonitem" checked="checked" />
+            <label for="chk_cal_nonitem">Calculate with other NonItem</label>
+          </div>
+        </div>
+      </div>
+      <div id="test2" class="col s12">
+        <div class="row">
+          <div class="col s6 l6 xl6 p">
+            <div class="card">
+              <div class="card-image">
+                <img src="./assets/images/outlet.jpg">
+                <span class="card-title">Card Title</span>
+                <div class="file-field input-field">
+                  <div class="btn">
+                    <span>Upload</span>
+                    <input type="file" name="avatar" multiple><i class="material-icons">file_upload</i>
+                  </div>
+                  <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text" placeholder="Upload File Pictuer">
+                  </div>
+                </div>
+                <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">delete</i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col s6 l6 xl6 p">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

@@ -16,13 +16,20 @@ export class PageMainComponent implements OnInit {
   { "id": "010101", "menuname": "AAA", "mom": "0101" }]
   ngOnInit() {
     // menu tree
-    $(document).ready(function () {
-      $('label.tree-toggler').click(function () {
-        $(this).parent().children('ul.tree').toggle(300);
-      });
-    });
+    // $(document).ready(function () {
+    //   $('label.tree-toggler').click(function () {
+    //     $(this).parent().children('ul.tree').toggle(300);
+    //   });
+    // });
     // end menu tree
-
+    $(document).ready(function () {
+      $('.collapsible').collapsible();
+    });
+    // Model
+    $(document).ready(function () {
+      // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+      $('.modal').modal();
+    });
     $(".button-collapse").sideNav();
   }
   changLang() {

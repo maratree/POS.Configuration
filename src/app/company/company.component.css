@@ -5,3 +5,11 @@
    /* border-width:5px;   */
     border-style:ridge;
 }
+.text-2{
+    font-weight: bold;
+    margin-bottom: 7px;
+    margin-top: 7px;
+    margin-right: 2px;
+    margin-left: 2px;
+    font-size: 18px;
+}

@@ -1,1 +1,85 @@
 /* You can add global styles to this file, and also import other style files */
+.tabs .tab a {
+  color: #eeeeee ;
+  /*rgba(238, 110, 115, 0.7);  */
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0 24px;
+  font-size: 14px;
+  font-style: Bold;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-transition: color .28s ease;
+  transition: color .28s ease;
+}
+.tabs .tab a:hover, .tabs .tab a.active {
+    background-color: #0277bd   ;
+    /* transparent */
+    color: #eeeeee ;
+}
+.tabs .indicator {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+     background-color: #0277bd ; 
+    will-change: left, right;
+}
+/* satrt td, th  */
+td, th {
+    padding: 5px 5px;
+    display: table-cell;
+    text-align: left;
+    vertical-align: middle;
+    border-radius: 2px;
+}
+/* end td, th  */
+/*start row  */
+.row {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px; 
+}
+/*end row  */
+/* start collection */
+.collection a.collection-item {
+    display: block;
+    transition: .25s;
+    color: black;
+}
+/*end collection  */
+/* start side-nav */
+.side-nav li>a {
+    color: rgba(0,0,0,0.87);
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    height: 48px;
+    line-height: 48px;
+    padding: 0 16px; 
+}
+/* end side-nav */
+/* start button  */
+.btn, .btn-large, .btn-flat {
+    border: none;
+    border-radius: 20px;
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    height: 40px;
+    /* padding: 0 2rem; */
+    text-transform: uppercase;
+    vertical-align: middle;
+    -webkit-tap-highlight-color: transparent;
+}
+/* end button  */
+/*start search  */
+.nav-wrapper .input-field input[type=search] {
+    height: 40px; 
+    padding-left: 4rem;
+    width: calc(100% - 4rem);
+    border: 0;
+    box-shadow: none;
+    background-color: #e0e0e0  ;
+}
+/*end search  */

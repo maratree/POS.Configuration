@@ -27,6 +27,10 @@ import { WorkstationListComponent } from './workstation-list/workstation-list.co
 import { WorkstationComponent } from './workstation/workstation.component';
 import { OutletListComponent } from './outlet-list/outlet-list.component';
 import { OutletComponent } from './outlet/outlet.component';
+import { ShiftGroupComponent } from './shift-group/shift-group.component';
+import { DiscountListComponent } from './discount-list/discount-list.component';
+import { DiscountComponent } from './discount/discount.component';
+
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -49,7 +53,10 @@ export function createTranslateLoader(http: HttpClient) {
     WorkstationListComponent,
     WorkstationComponent,
     OutletListComponent,
-    OutletComponent
+    OutletComponent,
+    ShiftGroupComponent,
+    DiscountListComponent,
+    DiscountComponent
   ],
   imports: [
     MaterializeModule,
