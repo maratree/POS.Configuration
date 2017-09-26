@@ -30,6 +30,8 @@ import { OutletComponent } from './outlet/outlet.component';
 import { ShiftGroupComponent } from './shift-group/shift-group.component';
 import { DiscountListComponent } from './discount-list/discount-list.component';
 import { DiscountComponent } from './discount/discount.component';
+import { ShiftComponent } from './shift/shift.component';
+import { ShiftListComponent } from './shift-list/shift-list.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -56,7 +58,9 @@ export function createTranslateLoader(http: HttpClient) {
     OutletComponent,
     ShiftGroupComponent,
     DiscountListComponent,
-    DiscountComponent
+    DiscountComponent,
+    ShiftComponent,
+    ShiftListComponent
   ],
   imports: [
     MaterializeModule,

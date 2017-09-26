@@ -1,0 +1,56 @@
+<div class="">
+  <form class="col s12 l9 xl10 offset-l3 offset-xl2">
+    <p>Shift / Search</p>
+    <div class="row">
+      <a class="waves-effect waves-light btn green darken-4" routerLink="/Pmain/shift"><i class="material-icons center">add</i></a>
+      <a class="waves-effect waves-light btn yellow accent-4"><i class="material-icons center">edit</i></a>
+      <a class="waves-effect waves-light btn deep-orange darken-4"><i class="material-icons center">delete</i></a>
+    </div>
+    <div class="row">
+      <div class="nav-wrapper teal darken-1">
+        <form>
+          <div class="input-field ">
+            <input id="search" name="search" type="search" required>
+            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+            <i class="material-icons">search</i>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+    <div class="row">
+      <table class="highlight">
+        <thead>
+          <tr>
+            <th>Shift Code</th>
+            <th>Shift Name</th>
+            <th>Outlet Name</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>01</td>
+            <td>GC Breakfast</td>
+            <td>Grand Cafe</td>
+            <td>02:01:00</td>
+            <td>11:00:00</td>
+          </tr>
+          <tr>
+            <td>02</td>
+            <td>GC Dinner</td>
+            <td>Grand Cafe</td>
+            <td>17:00:01</td>
+            <td>01:59:00</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <ul class="pagination tcenter">
+      <li class="waves-effect" *ngFor="let p of paging;let i = index;" [ngClass]="{'active':i==numPage}" (click)="gotoPage(i);"><a>{{p}}</a></li>
+    </ul>
+  </form>
+</div>

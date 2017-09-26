@@ -19,6 +19,7 @@ import { OutletComponent } from './outlet/outlet.component';
 import { ShiftGroupComponent } from './shift-group/shift-group.component';
 import { DiscountListComponent } from './discount-list/discount-list.component';
 import { DiscountComponent } from './discount/discount.component';
+import { ShiftListComponent } from './shift-list/shift-list.component';
 const routes: Routes = [
   {
     path: '',
@@ -60,6 +61,8 @@ const routes: Routes = [
       path: 'discount-list', component: DiscountListComponent
     }, {
       path: 'discount', component: DiscountComponent
+    }, {
+      path: 'shift-list', component: ShiftListComponent
     }]
   }
 ];

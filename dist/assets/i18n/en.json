@@ -1,0 +1,10 @@
+{
+    "login":{
+        "sign-in":"SIGN IN",
+        "username":"Username",
+        "password":"Password",
+        "forget-pass":"Forget password",
+        "welcome":"Welcome"
+    }
+
+}
