@@ -14,247 +14,58 @@
           <li><a (click)="toLogin();"><i class="material-icons">exit_to_app</i></a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
-          <!--Master  -->
           <li class="no-padding">
-            <ul class="collapsible collapsible-accordion">
-              <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">computer</i>Master</a>
+
+            <ul class="collapsible collapsible-accordion" *ngFor="let item1 of menuListData;">
+              <li class="bold" *ngIf="item1.parent=='0'"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">{{item1.icon}}</i>{{item1.name}}</a>
                 <div class="collapsible-body">
                   <li class="no-padding">
-                    <ul class="collapsible collapsible-accordion">
-                      <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">tablet_mac</i>Master Data</a>
+
+                    <ul class="collapsible collapsible-accordion" *ngFor="let item2 of menuListData;">
+                      <li class="bold" *ngIf="item1.id==item2.parent"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">{{item2.icon}}</i>{{item2.name}}</a>
                         <div class="collapsible-body">
-                          <ul>
-                            <li><a routerLink="/Pmain/company-list"> - Company</a></li>
-                            <li><a routerLink="/Pmain/workstation-list"> - Workstation</a></li>
-                            <li><a routerLink="/Pmain/outlet-list"> - Outlet</a></li>
-                            <li><a> - Zone</a></li>
-                            <li><a routerLink="/Pmain/shift-group"> - Shift Group</a></li>
-                            <li><a routerLink="/Pmain/shift-list"> - Shift</a></li>
-                            <li class="no-padding">
-                              <ul class="collapsible collapsible-accordion">
-                                <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">event_seat</i>Decor</a>
-                                  <div class="collapsible-body">
-                                    <ul>
-                                      <li><a> - Decor Type</a></li>
-                                      <li><a> - Decor Status Type</a></li>
-                                      <li><a> - Decor</a></li>
-                                    </ul>
-                                  </div>
-                                </li>
-                              </ul>
-                          </ul>
+                          <li class="no-padding">
+
+                            <ul class="collapsible collapsible-accordion" *ngFor="let item3 of menuListData;">
+                              <li class="bold" *ngIf="item2.id==item3.parent"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">{{item3.icon}}</i>{{item3.name}}</a>
+                                
+                                <div class="collapsible-body">
+                                  <ul *ngFor="let item4 of menuListData;">
+                                    <li *ngIf="item3.id==item4.parent"><a routerLink="/Pmain/company-list">{{item4.name}}</a></li>
+                                  </ul>
+                                </div>
+
+                              </li>
+                            </ul>
+
+                          </li>
                         </div>
-                        </li>
+                      </li>
                     </ul>
-                    </li>
-                    <!--  -->
-                    <li class="no-padding">
-                      <ul class="collapsible collapsible-accordion">
-                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">note_add</i>Condiment</a>
-                          <div class="collapsible-body">
-                            <ul>
-                              <li><a> - Condiment Group</a></li>
-                              <li><a> - Condiment</a></li>
-                            </ul>
-                          </div>
-                        </li>
-                      </ul>
-                    </li>
-                    <!--  -->
-                    <li class="no-padding">
-                      <ul class="collapsible collapsible-accordion">
-                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">attach_money</i>NonItem</a>
-                          <div class="collapsible-body">
-                            <ul>
-                              <li><a routerLink="/Pmain/discount-list"> - Discount</a></li>
-                              <li><a> - Service</a></li>
-                              <li><a> - Vat</a></li>
-                            </ul>
-                          </div>
-                        </li>
-                      </ul>
-                    </li>
-                    <!--  -->
-                    <li class="no-padding">
-                      <ul class="collapsible collapsible-accordion">
-                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">restaurant</i>Product</a>
-                          <div class="collapsible-body">
-                            <ul>
-                              <li><a routerLink="/Pmain/product-list"> - Product</a></li>
-                            </ul>
-                          </div>
-                        </li>
-                      </ul>
-                    </li>
-                    <!--  -->
-                    <li class="no-padding">
-                      <ul class="collapsible collapsible-accordion">
-                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">restaurant_menu</i>Menu</a>
-                          <div class="collapsible-body">
-                            <ul>
-                              <li><a> - Menu</a></li>
-                            </ul>
-                          </div>
-                        </li>
-                      </ul>
-                    </li>
-                    <!--  -->
-                    <li class="no-padding">
-                      <ul class="collapsible collapsible-accordion">
-                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">payment</i>Payment</a>
-                          <div class="collapsible-body">
-                            <ul>
-                              <li><a> - Payment</a></li>
-                            </ul>
-                          </div>
-                        </li>
-                      </ul>
-                    </li>
-                    <!--  -->
-                    <li class="no-padding">
-                      <ul class="collapsible collapsible-accordion">
-                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">print</i>Printer</a>
-                          <div class="collapsible-body">
-                            <ul>
-                              <li><a> - Printer</a></li>
-                              <li><a> - Print Format</a></li>
-                              <li><a> - Print Config</a></li>
-                            </ul>
-                          </div>
-                        </li>
-                      </ul>
-                    </li>
-                    <!--  -->
-                    <li class="no-padding">
-                      <ul class="collapsible collapsible-accordion">
-                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">person</i>Employee</a>
-                          <div class="collapsible-body">
-                            <ul>
-                              <li><a> - officer</a></li>
-                              <li><a> - Entertain</a></li>
-                            </ul>
-                          </div>
-                        </li>
-                      </ul>
-                    </li>
-                    <!--  -->
-                    <li class="no-padding">
-                      <ul class="collapsible collapsible-accordion">
-                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">stars</i>Promotion</a>
-                          <div class="collapsible-body">
-                            <ul>
-                              <li><a> - Happy Hour</a></li>
-                            </ul>
-                          </div>
-                        </li>
-                      </ul>
-                    </li>
-                    <!--  -->
+                  </li>
                 </div>
-                </li>
+              </li>
             </ul>
-            </li>
-            <!--Setup  -->
-            <li class="no-padding">
-              <ul class="collapsible collapsible-accordion">
-                <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">settings</i>Setup</a>
-                  <div class="collapsible-body">
-                    <ul>
-                      <li><a>- Product</a></li>
-                      <li><a>- Sale Type</a></li>
-                      <li><a>- Policy</a></li>
-                      <li><a>- Message Templete</a></li>
-                      <li><a>- Set Control</a></li>
-                      <li><a>- Personal</a></li>
-                      <li><a>- Report Config</a></li>
-                    </ul>
-                  </div>
-                </li>
-              </ul>
-            </li>
-            <!--TEST MENU  -->
-            <!-- <li class="no-padding">
-              <ul class="collapsible collapsible-accordion">
-                <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">security</i>TEST MENU</a>
-                  <div class="collapsible-body">
-                    <ul>
-                      <li class="no-padding">
-                        <ul class="collapsible collapsible-accordion">
-                          <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">supervisor_account</i>MENU</a>
-                            <div class="collapsible-body">
-                              <ul>
-                                <li><a *ngFor="let a of menuListData;">{{a.menuname}}</a></li>
-                              </ul>
-                            </div>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-              </ul>
-            </li> -->
-            <!--Security  -->
-            <li class="no-padding">
-              <ul class="collapsible collapsible-accordion">
-                <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">security</i>Security</a>
-                  <div class="collapsible-body">
-                    <ul>
-                      <li class="no-padding">
-                        <ul class="collapsible collapsible-accordion">
-                          <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">supervisor_account</i>User</a>
-                            <div class="collapsible-body">
-                              <ul>
-                                <li><a (click)="to_userList();">  - User List</a></li>
-                                <li><a (click)="to_usergroupList()">  - User Group</a></li>
-                              </ul>
-                            </div>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-              </ul>
-            </li>
-            <!--Interface F&B Costing  -->
-            <li class="no-padding">
-              <ul class="collapsible collapsible-accordion">
-                <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">transfer_within_a_station</i>Interface FB Costing</a>
-                  <div class="collapsible-body">
-                    <ul>
-                      <li><a>- Include Item</a></li>
-                      <li><a>- Generate Textfile</a></li>
-                    </ul>
-                  </div>
-                </li>
-              </ul>
-            </li>
-            <!--Report  -->
-            <li class="no-padding">
-              <ul class="collapsible collapsible-accordion">
-                <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">content_paste</i>Report</a>
-                  <div class="collapsible-body">
-                    <ul>
-                      <li><a>- Report</a></li>
-                    </ul>
-                  </div>
-                </li>
-              </ul>
-            </li>
-            <li class="divider"></li>
-            <li><a class="waves-effect waves-light modal-trigger" href="#modal1"><i class="material-icons left">cast_connected</i>Database Tool</a></li>
-                    <li><a class="waves-effect waves-light modal-trigger" href="#modal2"><i class="material-icons left">settings_input_hdmi</i>Interface Tool</a></li>
-                    <li class="divider"></li>
-                    <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">lock</i>Change Password</a>
-              <!-- <li><a (click)="changLangEN();"><img src="assets/images/flag-icons/usa.png"></a></li>
+          </li>
+
+
+
+
+
+
+          <li class="divider"></li>
+          <li><a class="waves-effect waves-light modal-trigger" href="#modal1"><i class="material-icons left">cast_connected</i>Database Tool</a></li>
+          <li><a class="waves-effect waves-light modal-trigger" href="#modal2"><i class="material-icons left">settings_input_hdmi</i>Interface Tool</a></li>
+          <li class="divider"></li>
+          <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="material-icons">lock</i>Change Password</a>
+            <!-- <li><a (click)="changLangEN();"><img src="assets/images/flag-icons/usa.png"></a></li>
             <li><a (click)="changLangTH();"><img src="assets/images/flag-icons/th.png"></a></li> -->
-              <li class="bold"><a (click)="toLogin();" class="collapsible-header waves-effect waves-cyan"><i class="material-icons">exit_to_app</i>Sign out</a>
+            <li class="bold"><a (click)="toLogin();" class="collapsible-header waves-effect waves-cyan"><i class="material-icons">exit_to_app</i>Sign out</a>
 
         </ul>
       </div>
     </nav>
-   
+
     <!-- Modal Structure Database Tool-->
     <div id="modal1" class="modal modal-fixed-footer">
       <div class="modal-content">
@@ -328,6 +139,8 @@
             </div> -->
     </div>
     <router-outlet></router-outlet>
+
+
     <!--*****************                    START TEST TREE MUEN                   **********************  -->
     <!-- <div class="container"> -->
     <!-- <div class="row">
@@ -397,3 +210,13 @@
     </div> -->
     <!-- </div> -->
     <!--*****************                      END TEST TREE MUEN                   **********************  -->
+
+  </div>
+</div>
+<!-- ***************************** Test Menu ****************************  -->
+
+
+
+
+
+<!--****************************** End Test Menu  -->
